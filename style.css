@@ -7,56 +7,57 @@
 a { text-decoration: none; }
 .flex { display: flex; flex-direction: column; justify-content: center; align-items: center;}
 
-/* main */
-.logo { position: absolute; top: 50px; left: 5%; z-index: 1; }
-.logo { position: absolute; top: 50px; left: 5%; z-index: 1; }
-.logo h1 { font-size: 70px; font-weight: 800; color: #333333; }
+/* main(section) */
+.logo { position: absolute; top: 100px; margin: 0 15%; z-index: 1; }
+.logo h1 { font-size: 50px; font-weight: 800;}
+.logo h1 a { color: #d5d2d8; }
 
 section { position: relative; }
 
 .content { position: absolute; left: 5%; bottom: 5%; }
-.content h3 { margin-bottom: 10px; font-size: 40px; font-weight: 800; color: #FFFFFF; }
-.content p { font-size: 30px; font-weight: 400; color: #FFFFFF; }
+.content h3 { margin-bottom: 10px; font-size: 40px; font-weight: 800; color: #32383bff;}
+.content p { font-size: 30px; font-weight: 400; color: #32383bff; }
+
+.intro { width: 26%; height: 100vh; background: #32383bff; float: left; color: #d5d2d8; overflow: hidden; }
+.portfolio { width: 37%; height: 50vh; background: #ff8abdff; float: left; color: #32383bff; }
+.gallery { width: 37%; height: 50vh; background: #9aebffff; float: left; color: #32383bff; }
+.others { width: 37%; height: 50vh; background: #cdf5feff; float: left; color: #32383bff; }
+.login { width: 37%; height: 50vh; background: #74dfffff; float: left; color: #32383bff; }
 
 
-/* .portfolio {
-    width: 70%;
-    height: 100vh;
-    background: #A5DFF9;
-    float: left;
-}
+/* profile */
+.intro {position: relative;}
+.profile {position: absolute; top: 24%;}
 
-.hobby {
-    width: 30%;
-    height: 50vh;
-    background: #FFDE8A;
-    float: left;
-}
+.circle { width: 120px; height: 120px; background-color: #9c7bbf; border-radius: 90px; margin: 0 auto;}
+.contactLink {margin: 20px 0; text-align: center;}
+.contactLink a {color: #d5d2d8;}
 
-.feedback {
-    width: 30%;
-    height: 50vh;
-    background: #60C5BA;
-    float: left;
-} */
+.info {margin: 20px auto;}
+.info ul li { list-style-type: none; line-height: 50px; font-size: 20px; font-weight: 800; }
+
+.goToProfile {align-items: center;}
+.goToProfile button { background-color: #5e2b94; color: #e6e6e6; border-radius: 5px; font-weight: 800; border: none; width: 240px; height: 36px; margin: 30px 30px; cursor: pointer; }
 
 /* menu */
-.menu { position: absolute; top: 40px; right: 5%; width: 30px; height: 25px; z-index: 100; cursor: pointer;}
+.menu { position: absolute; top: 50px; left: 2.2%; width: 30px; height: 25px; z-index: 100; cursor: pointer;}
 
-.menu .bar { position: absolute; width: 30px; height: 5px; background: #FFFFFF; transition: all 0.5s; }
+.menu .bar { position: absolute; width: 30px; height: 5px; background: #FFFFFF; transition: all 0.5s; border-radius: 10px; }
 .menu .bar.b1 { top: 0; left: 0; opacity: 1; }
 .menu.on .bar.b1 {opacity: 0;}
 .menu .bar.b2 { top: 10px; left: 0; opacity: 1;}
 .menu.on .bar.b2 { transform: rotate(-45deg); }
 .menu .bar.b3 { top: 10px; left: 0; opacity: 1; }
 .menu.on .bar.b3 { transform: rotate(45deg);}
+.menu .bar.b4 { top: 20px; left: 0; opacity: 1;}
+.menu.on .bar.b4 { opacity: 0; }
 
 /* nav */
-nav {   position: absolute; top: 0; right: -30%;
-        width: 30%; height: 100vh; background: #32383bff; z-index: 2; 
+nav {   position: absolute; top: 0; left: -30%;
+        width: 26%; height: 100vh; background-color: #413252; z-index: 2; 
         text-align: center; transition: all 0.3s; }
 
-nav.on {right: 0;}
+nav.on {left: 0;}
 nav .background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 nav .foreground { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #00000066; }
 

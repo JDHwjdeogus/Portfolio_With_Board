@@ -9,13 +9,14 @@
 </head>
 <body>
     <div class="wrap">
-        <!-- 로고 -->
-        <div class="logo">
-            <h1><a href="#">JeongDaHyeon</a></h1>
-        </div>
         
         <!-- 섹션 -->
         <section class="flex intro">
+            <!-- 로고 -->
+            <div class="logo">
+                <h1><a href="#">JeongDaHyeon</a></h1>
+            </div>
+            
             <div class="profile">
                 <div class="pic">
                     <div class="circle">
@@ -53,7 +54,7 @@
             </div>
         </section>
         
-        <section class="flex hobby">
+        <section class="flex gallery">
             <img src="" alt="">
             <div class="content">
                 <a href="#">
@@ -83,10 +84,11 @@
         </section>
         
         <!-- 메뉴 -->
-        <div class="menu">
+        <div class="menu" onclick = "openNav()">
             <div class="bar b1"></div>
             <div class="bar b2"></div>
             <div class="bar b3"></div>
+            <div class="bar b4"></div>
         </div>
 
         <nav class="flex foreground">
@@ -110,4 +112,13 @@
         </nav>
     </div>
 </body>
+<script>
+    function openNav() {
+        let menu = document.querySelector(".menu");
+        let nav = document.querySelector("nav");
+        
+        menu.classList.toggle("on");
+        nav.classList.toggle("on");
+    }
+</script>
 </html>
