@@ -20,8 +20,8 @@ section { position: relative; }
 
 .intro { width: 26%; height: 100vh; background: #32383bff; float: left; color: #d5d2d8; overflow: hidden; }
 .portfolio { width: 37%; height: 50vh; background: #ff8abdff; float: left; color: #32383bff; }
-.gallery { width: 37%; height: 50vh; background: #9aebffff; float: left; color: #32383bff; }
-.others { width: 37%; height: 50vh; background: #cdf5feff; float: left; color: #32383bff; }
+.gallery { width: 37%; height: 50vh; background: #cdf5feff; float: left; color: #32383bff; }
+.others { width: 37%; height: 50vh; background: #9aebffff; float: left; color: #32383bff; }
 .login { width: 37%; height: 50vh; background: #74dfffff; float: left; color: #32383bff; }
 
 
@@ -31,13 +31,13 @@ section { position: relative; }
 
 .circle { width: 120px; height: 120px; background-color: #9c7bbf; border-radius: 90px; margin: 0 auto;}
 .contactLink {margin: 20px 0; text-align: center;}
-.contactLink a {color: #d5d2d8;}
+.contactLink a {color: #fff; font-size: 18px; font-family: sans-serif;}
 
-.info {margin: 20px auto;}
+.info {margin: 28px 0;}
 .info ul li { list-style-type: none; line-height: 50px; font-size: 20px; font-weight: 800; }
 
 .goToProfile {align-items: center;}
-.goToProfile button { background-color: #5e2b94; color: #e6e6e6; border-radius: 5px; font-weight: 800; border: none; width: 240px; height: 36px; margin: 30px 30px; cursor: pointer; }
+.goToProfile button { background-color: #5e2b94; color: #e6e6e6; border-radius: 5px; font-size: 16px; font-weight: 800; border: none; width: 240px; height: 36px; margin: 30px 30px; cursor: pointer; }
 
 /* menu */
 .menu { position: absolute; top: 50px; left: 2.2%; width: 30px; height: 25px; z-index: 100; cursor: pointer;}
@@ -67,3 +67,29 @@ nav .foreground { position: absolute; top: 0; left: 0; width: 100%; height: 100%
 .link-item { height: 7vh; }
 .link-item a { font-size: 30px; font-weight: 400; color: #FFFFFF; }
 
+
+
+/* media 쿼리 */
+@media (orientation: portrait) and (max-width: 900px) {
+        .logo {top: 54px;}
+        .logo h1 {font-size: 50px;}
+
+        .intro, .portfolio, .others, .gallery, .login { width: 100%; height: 100vh; }
+        
+        .content h3 {font-size: 30px;}
+        .content p {font-size: 25px;}
+
+        .menu { position: fixed; top: 70px; }
+        nav { position: fixed; width: 100%; left: -100%; }
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+        .logo {top: 65px;}
+        .logo h1 {font-size: 30px;}
+        .profile {top: 20%;}
+        .info {margin: 0 30px;}
+        .info ul li {font-size: 16px;}
+        
+        .content h3 {font-size: 25px;}
+        .content p {font-size: 17px;}
+}
