@@ -5,49 +5,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
     <div class="wrap">
 
-        <nav class="mainMenu">
-            <ul>
-                <li> 프로젝트
-                    <ul>
+        <!-- 로고 -->
+        <div class="logo">
+            <h1><a href="#">JeongDaHyeon</a></h1>
+        </div>
 
-                    </ul>
-                </li>
+        <!-- 사이트 위쪽 고정메뉴 -->
+        <section class="menuSection">
+            <div class="menuWrap">
+                <ul>
+                    <li> <a href="#">portfolio</a> 
+                        <ul class="subMenuUl">
+                            <li class="projectLink subList"> <a href="#">프로젝트</a> </li>
+                            <li class="skillsLink subList"> <a href="#">기술</a> </li>
+                        </ul>
+                    </li>
 
-                <li> 갤러리
-                    <ul>
+                    <li> <a href="#">gallery</a> 
+                        <ul class="subMenuUl">
+                            <li class="gallery subList"> <a href="#">갤러리</a> </li>
+                            <li class="hobby subList"> <a href="#">취미</a> </li>
+                        </ul>
+                    </li>
 
-                    </ul>
-                </li>
+                    <li> <a href="#">game</a> </li>
 
-                <li> 게임
-                    <ul>
+                    <li> <a href="#">board</a> </li>
 
-                    </ul>
-                </li>
+                    <li> <a href="#">profile</a> </li>
 
-                <li> 게시판
-                    <ul>
+                    <li> <a href="#">My Page</a> 
+                        <ul class="subMenuUl">
+                            <li class="subList"> <a href="#">내 정보</a> </li>
+                            <li class="subList"> <a href="#">피드백 이력</a> </li> <!-- 쉿 구현 중 ^^...! -->
+                            <li class="subList"> <a href="#">게임 이력</a> </li> <!-- 쉿 구현 중 ^^...! -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-                    </ul>
-                </li>
+        <!-- 메뉴 아래쪽 영역 전체 -->
+        <section class="contentsSection">
 
-                <li> 게임
-                    <ul>
+            <!-- 스크롤 고정 내부 링크 이동 리모컨 -->
+            <section class="remoteControlArea">
+                <div class="remoteControl">
+                    <div class="titleBox">
+                        <strong>목차</strong>
+                    </div>
+                    <div class="linkList">
+                        <ul>
+                            <li><a href="#">프로젝트</a></li>
+                            <li><a href="#">기술</a></li>
+                        </ul>
+                    </div>
+                    <div class="moveTop">
+                        <button type="button">맨 위로</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 프로젝트 섹션(내부 링크 클릭 시 이동할 곳) -->
+            <section class="projectArea slide_manual">
+                <div class="projectList">
+                    <div class="projectNameList">
+                        <ul>
+                            <li>프로젝트 1</li>
+                            <li>프로젝트 2</li>
+                            <li>프로젝트 3</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    </ul>
-                </li>
+                <div class="projectImages">
+                    <div class="ImageSlidesPannel">
+                        <div class="imagesDiv">
+                            <div class="images">프로젝트 1</div>
+                            <div class="images">프로젝트 2</div>
+                            <div class="images">프로젝트 3</div>
+                        </div>
+                    </div>
+                </div>
 
-                <li> My Page
-                    <ul>
+                <div class="projectInfo">
+                    <div class="title">
+                        <div class="titlesPannel">
+                            <div class="titleTexts">프로젝트 1</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <ul class="infoList">
+                            <li>
+                                <span>소요기간</span>
+                                <p>1주</p>
+                            </li>
+                            <li>
+                                <span>사용언어</span>
+                                <p>html</p>
+                                <p>css</p>
+                                <p>jQuery</p>
+                                <p>java script</p>
+                                <p>mySql</p>
+                            </li>
+                            <li>
+                                <span>기획서</span>
+                                <p>
+                                    <a href="#">기획서 링크</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+                <div class="projectDescription">
+                    <div class="title">
+                        <div class="titleTexts">개발과정</div>
+                    </div>
+                    <div class="content">
+                        <div class="projectDescriptinDetail">
+                            상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                            상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                            상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- 기술 섹션(내부 링크 클릭 시 이동할 곳) -->
+            <section class="skillArea horizon_scroll">
+                <div class="frontSkills skillsList">
+                    <div class="skillsGroupTitle">FrontEnd</div>
+                    <div class="horizonalScroll">
+                        <ul class="skillsScroll">
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="backSkills skillsList">
+                    <div class="skillsGroupTitle">BackEnd</div>
+                    <div class="horizonalScroll">
+                        <ul class="skillsScroll">
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="designSkills skillsList">
+                    <div class="skillsGroupTitle">Design</div>
+                    <div class="horizonalScroll">
+                        <ul class="skillsScroll">
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                            <li class="skills"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </section>
 
     </div>
 </body>
