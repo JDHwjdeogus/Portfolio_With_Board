@@ -10,40 +10,42 @@
 <body>
     <div class="wrap">
 
-        <!-- 로고 -->
-        <div class="logo">
-            <h1><a href="#">JeongDaHyeon</a></h1>
-        </div>
-
         <!-- 사이트 위쪽 고정메뉴 -->
         <section class="menuSection">
             <div class="menuWrap">
-                <ul>
-                    <li> <a href="#">portfolio</a> 
-                        <ul class="subMenuUl">
+                <!-- 로고 -->
+                <div class="logo">
+                    <h1><a href="index.html">JeongDaHyeon</a></h1>
+                </div>
+                <!-- 메인메뉴 -->
+                <ul class="mainMenuUl">
+                    <li class="mainList main1" onclick="openMenu()"> <a href="#">portfolio</a> 
+                        <ul class="subMenuUl subMenu1">
                             <li class="projectLink subList"> <a href="#">프로젝트</a> </li>
                             <li class="skillsLink subList"> <a href="#">기술</a> </li>
                         </ul>
                     </li>
 
-                    <li> <a href="#">gallery</a> 
-                        <ul class="subMenuUl">
+                    <li class="mainList main2" onclick="openMenu()"> <a href="#">gallery</a> 
+                        <!-- 서브메뉴 -->
+                        <ul class="subMenuUl subMenu2">
                             <li class="gallery subList"> <a href="#">갤러리</a> </li>
                             <li class="hobby subList"> <a href="#">취미</a> </li>
                         </ul>
                     </li>
 
-                    <li> <a href="#">game</a> </li>
+                    <li class="mainList main3"> <a href="#">game</a> </li>
 
-                    <li> <a href="#">board</a> </li>
+                    <li class="mainList main4"> <a href="#">board</a> </li>
 
-                    <li> <a href="#">profile</a> </li>
+                    <li class="mainList main5"> <a href="#">profile</a> </li>
 
-                    <li> <a href="#">My Page</a> 
-                        <ul class="subMenuUl">
-                            <li class="subList"> <a href="#">내 정보</a> </li>
-                            <li class="subList"> <a href="#">피드백 이력</a> </li> <!-- 쉿 구현 중 ^^...! -->
-                            <li class="subList"> <a href="#">게임 이력</a> </li> <!-- 쉿 구현 중 ^^...! -->
+                    <li class="mainList main6" onclick="openMenu()"> <a href="#">My Page</a> 
+                        <!-- 서브메뉴 -->
+                        <ul class="subMenuUl subMenu3"><!-- 쉿 구현 중 ^^...! -->
+                            <li class="myInformation subList"> <a href="#">내 정보</a> </li>
+                            <li class="boardBreakdown subList"> <a href="#">게시판 이력</a> </li>
+                            <li class="gameBreakdown subList"> <a href="#">게임 이력</a> </li> 
                         </ul>
                     </li>
                 </ul>
@@ -56,9 +58,11 @@
             <!-- 스크롤 고정 내부 링크 이동 리모컨 -->
             <section class="remoteControlArea">
                 <div class="remoteControl">
+                    <!-- 목차(스크롤 고정 객체) -->
                     <div class="titleBox">
                         <strong>목차</strong>
                     </div>
+                    <!-- 내부 링크 목록 -->
                     <div class="linkList">
                         <ul>
                             <li><a href="#">프로젝트</a></li>
@@ -183,4 +187,15 @@
 
     </div>
 </body>
+<script>
+    function openMenu() {
+        let click = document.querySelector(".subMenuUl");
+        if(click.style.display === "none") {
+            click.style.display = "block";
+        }
+        else {
+            click.style.display = "none";
+        }
+    }
+</script>
 </html>
