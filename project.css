@@ -8,11 +8,13 @@ a { text-decoration: none; }
 ul li { list-style: none; }
 .flex { display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
-/* 위쪽 섹션 */
 section { position: relative; }
 
+
+/* 위쪽 섹션 (메뉴, 로고) */
+
 /* 로고 */
-.logo { margin: 0 auto; width: 100%; height: 8vh; line-height: 40px; background-color: #160e19; text-align: center; font-family: cursive; }
+.logo { margin: 0 auto; width: 100%; height: 70px; line-height: 40px; background-color: #160e19; text-align: center; font-family: cursive; }
 .logo h1 { font-size: 40px; font-weight: 800; line-height: 69px; }
 .logo h1 a {color: #bfe8e9;}
 
@@ -21,7 +23,7 @@ section { position: relative; }
 .menuWrap { width: 100%; position: relative; display: inline-block; background-color: #160e19; z-index: 10; }
 
 .mainMenuUl { display: flex; }
-.mainMenuUl > li { flex-basis: 17%; height: 6vh; font-weight: 800; font-size: 24px; line-height: 44px; text-align: center; position: relative; border-right: 2px solid #8a9ab8; }
+.mainMenuUl > li { flex-basis: 17%; height: 60px; font-weight: 800; font-size: 24px; line-height: 44px; text-align: center; position: relative; border-right: 2px solid #8a9ab8; }
 .mainMenuUl > li:last-child { border-right: none; }
 .mainMenuUl li a { color: #bfe8e9; }
 
@@ -32,23 +34,31 @@ section { position: relative; }
 .subList:hover { background-color: #281228dc;}
 .subList a { font-size: 18px; }
 
+
+
 /* 아래쪽 섹션 (컨텐츠, 서브메뉴 리모컨) */
 .contentsSection { background-color: #8ee2f7; height: 100vh; } /*height 주석처리*/
 
 /* 리모컨 영역 */
-.remoteControlArea { width: 16.5vw; height: 100vh; background-color: #29b7de; right: 0; position: absolute; }
-.remoteControl { background-color: #d8f5ff; border-radius: 60px; position: fixed; top: 15vh; right: 25px; }
-.remoteControl div { margin: 10px 20px; }
-.titleBox { font-size: 18px; font-weight: 600; text-align: center; color: #6b6e81; }
-.linkList ul li { text-align: center; width: 100px; border: #160e19 solid 2px; }
-.linkList ul li:last-child {border-top: none; }
-.moveTop { color: #160e19; }
+.remoteControlArea { width: 9vw; height: 100vh; background-color: #29b7de; right: 0; position: absolute; overflow: hidden; }
+.remoteControl { background-color: #d8f5ff; border-radius: 100px; position: fixed; top: 150px; right: 10px; padding: 35px 10px;  }
+.remoteControl div { margin: 15px auto; }
+
+.titleBox { font-size: 20px; font-weight: 600; text-align: center; color: #6b6e81; }
+
+.linkList ul li { text-align: center; width: 100px; height: 50px; background-color: #29b7de; line-height: 48px; margin: 3px auto; }
+.linkList ul li:hover {background-color: #2361be;}
+.linkList ul li a { font-size: 15px; color: #000153; font-weight: 600; }
+.linkList ul li:last-child { border-top: none; }
+
+.moveTop { color: #160e19; text-align: center; }
+.moveTop button { cursor: pointer; font-weight: 600; border-radius: 3px; border: none; background-color: #2361be; width: 70px; height: 30px; }
 
 /* 프로젝트 */
-.projectArea { width: 82vw; }
+.projectArea { width: 91vw; overflow: hidden; }
 
 /* 기술 */
-.skillArea { width: 82vw }
+.skillArea { width: 91vw; overflow: hidden; }
 
 
 
