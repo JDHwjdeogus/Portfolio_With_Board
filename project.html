@@ -93,67 +93,74 @@
             
             <!-- 프로젝트 섹션(내부 링크 클릭 시 이동할 곳) -->
             <section class="projectArea slide_manual">
-                <div class="projectList">
-                    <div class="projectNameList">
-                        <ul>
-                            <li>프로젝트 1</li>
-                            <li>프로젝트 2</li>
-                            <li>프로젝트 3</li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="contents">
 
-                <div class="projectImages">
-                    <div class="ImageSlidesPannel">
-                        <div class="imagesDiv">
-                            <div class="images">프로젝트 1</div>
-                            <div class="images">프로젝트 2</div>
-                            <div class="images">프로젝트 3</div>
+                    <div class="projectList">
+                        <div class="projectNameList">
+                            <ul class="selector">
+                                <li class="highlight"></li>
+                                <li class="selector-item" onclick="selectItem(event)">프로젝트 1</li>
+                                <li class="selector-item" onclick="selectItem(event)">프로젝트 2</li>
+                                <li class="selector-item" onclick="selectItem(event)">프로젝트 3</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
 
-                <div class="projectInfo">
-                    <div class="title">
-                        <div class="titlesPannel">
-                            <div class="titleTexts">프로젝트 1</div>
+                    <div class="projectImages">
+                        <div class="ImageSlidesPannel">
+                            <div class="imagesDiv">
+                                <div class="images">프로젝트 1</div>
+                                <div class="images">프로젝트 2</div>
+                                <div class="images">프로젝트 3</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="content">
-                        <ul class="infoList">
-                            <li>
-                                <span>소요기간</span>
-                                <p>1주</p>
-                            </li>
-                            <li>
-                                <span>사용언어</span>
-                                <p>html</p>
-                                <p>css</p>
-                                <p>jQuery</p>
-                                <p>java script</p>
-                                <p>mySql</p>
-                            </li>
-                            <li>
-                                <span>기획서</span>
-                                <p>
-                                    <a href="#">기획서 링크</a>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="projectDescription">
-                    <div class="title">
-                        <div class="titleTexts">개발과정</div>
-                    </div>
-                    <div class="content">
-                        <div class="projectDescriptinDetail">
-                            상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
-                            상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
-                            상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                    <div class="projectInfo">
+                        <div class="title">
+                            <div class="titlesPannel">
+                                <div class="titleTexts">프로젝트 1</div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <ul class="infoList">
+                                <li>
+                                    <span>소요기간</span>
+                                    <p>1주</p>
+                                </li>
+                                <li>
+                                    <span>사용언어</span>
+                                    <p>html</p>
+                                    <p>css</p>
+                                    <p>jQuery</p>
+                                    <p>java script</p>
+                                    <p>mySql</p>
+                                </li>
+                                <li>
+                                    <span>기획서</span>
+                                    <p>
+                                        <a href="#">기획서 링크</a>
+                                    </p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
+                
+
+                    <div class="projectDescription">
+                        <div class="title">
+                            <div class="titleTexts">개발과정</div>
+                        </div>
+                        <div class="content">
+                            <div class="projectDescriptinDetail">
+                                상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                                상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                                상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </section>
     
@@ -205,10 +212,48 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 <script>
+    
+    // 드롭다운 메뉴 토글
     $('.subMenuUl').hide();
     $(".mainList a").click(function () {
-    $(this).parent(".mainList").children("ul").slideToggle("200");
-    $(this).find("i.fa").toggleClass("fa-angle-up fa-angle-down");
-});
+        $(this).parent(".mainList").children("ul").slideToggle("100");
+        $(this).find("i.fa").toggleClass("fa-angle-up fa-angle-down");
+    });
+
+
+    // 메뉴(프로젝트 리스트) 선택
+    let highlight;
+
+    function addClass(target) {
+        target.classList.add('selector-item--active');
+    }
+
+    function selectItem(event) {
+        const target = event.target;
+        const items = document.querySelectorAll('.selector-item');
+        const parent = document.querySelector('.selector');
+        const targetRect = target.getBoundingClientRect();
+        const parentRect = parent.getBoundingClientRect();
+        
+        items.forEach(el => el.classList.remove('selector-item--active'));
+
+        highlight.style.left = `${targetRect.left - parentRect.left}px`;
+        
+        addClass(target);
+        setHighlightWidth(target);
+    }
+
+    function setHighlightWidth(target = null) {
+        const itemTarget = target || document.querySelector('.selector-item');
+        const rect = itemTarget.getBoundingClientRect();
+        
+        addClass(itemTarget)
+        
+        highlight = document.querySelector('.highlight');
+        highlight.style.width = `${rect.width}px`;
+    }
+
+    setHighlightWidth();
+
 </script>
 </html>
