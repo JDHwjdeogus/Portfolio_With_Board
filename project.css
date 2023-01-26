@@ -38,10 +38,10 @@ section { position: relative; }
 
 
 /* 아래쪽 섹션 (컨텐츠, 서브메뉴 리모컨) */
-.contentsSection { background-color: #8ee2f7; height: 100%; } /*height 주석처리*/
+.contentsSection { height: 100%; } /*height 주석처리*/
 
 /* 리모컨 영역 */
-.remoteControlArea { width: 9vw; height: 100%; background-color: #29b7de; right: 0; position: absolute; }
+.remoteControlArea { width: 9vw; height: 100%; background-color: #c8b7d6; right: 0; position: absolute; }
 /* 리모컨 */
 .remoteControl { background-color: #d8f5ff; border-radius: 30%; position: fixed; top: 14vh; right: 1.5vw; padding: 2vh 0.5vw;  }
 .remoteControl div { margin: 2vh auto; }
@@ -59,7 +59,7 @@ section { position: relative; }
 
 /* 컨텐츠 (프로젝트, 스킬) */
 /* 프로젝트 */
-.projectArea { width: 90.1vw; background-color: #dd6dc8; padding: 3vh 4vw; }
+.projectArea { width: 90.1vw; padding: 3vh 4vw; }
 .contents { width: 80vw; margin: 0 auto; }
 
 .projectList { margin: 0 auto; } 
@@ -69,14 +69,14 @@ section { position: relative; }
 .selector-item--active { color: #ffffff }
 
 /* 이미지 슬라이드 (구역 잡기) */
-.imageSlide { width: 60vw; background-color: #160e19; margin: 2vh auto; margin-bottom: 0; overflow: hidden; }
+.imageSlide { width: 60vw; background-color: #9e9e9e; margin: 2vh auto; margin-bottom: 0; overflow: hidden; }
 .imagesDiv { display: flex; flex-direction: row; width: 180vw; }
 .images { width: 60vw; height: 48vh; }
 
 /* 설명 슬라이드 (구역 잡기) */
 .infoSlide { display: flex; flex-wrap: wrap; margin: 0 auto; margin-left: 10vw; }
 
-.projectInfo { width: 24vw; background-color: #8ee2f7; overflow: hidden; }
+.projectInfo { width: 24vw; background-color: #dd99da; overflow: hidden; }
 .projectInfo .content { width: 72vw; display: flex; flex-direction: row; }
 .infoList { padding: 2vh 2vw; width: 24vw; height: 40vh; }
 
@@ -92,8 +92,8 @@ section { position: relative; }
 
 
 /* 기술 */
-.skillArea { width: 90.1vw; background-color: #bf4b6c; padding: 4vh 0; }
-.skillsList { width: 60vw; margin: 2vh auto; height: 32vh; background-color: #b1dac3; overflow: scroll; white-space: nowrap; overflow-y: hidden; }
+.skillArea { width: 90.1vw; padding: 4vh 0; }
+.skillsList { width: 60vw; margin: 2vh auto; height: 32vh; background-color: #d1ccd1; overflow: scroll; white-space: nowrap; overflow-y: hidden; }
 .skillsList:first-child { margin-top: 0; }
 .skillsList:last-child { margin-bottom: 0; }
 
