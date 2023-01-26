@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="./project.css">
     <script src="https://kit.fontawesome.com/8c601cce34.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -79,8 +79,8 @@
                     <!-- 내부 링크 목록 -->
                     <div class="linkList">
                         <ul>
-                            <li><a href="#">프로젝트</a></li>
-                            <li><a href="#">기술</a></li>
+                            <li><a href="#project">프로젝트</a></li>
+                            <li><a href="#skills">기술</a></li>
                         </ul>
                     </div>
                     <div class="moveTop">
@@ -92,7 +92,7 @@
             </section>
             
             <!-- 프로젝트 섹션(내부 링크 클릭 시 이동할 곳) -->
-            <section class="projectArea slide_manual">
+            <section class="projectArea slide_manual" id="project">
                 <div class="contents">
 
                     <!-- 열람할 프로젝트 선택: 슬라이드 전체 컨트롤 -->
@@ -111,21 +111,19 @@
                     <div class="imageSlide">
                         <!-- sub slide: 프로젝트 1 -->
                         <div class="imagesDiv projectSlide1">
-                            <div class="images">프로젝트 1</div>
-                            <div class="images">프로젝트 1</div>
-                            <div class="images">프로젝트 1</div>
-                        </div>
-                        <!-- sub slide: 프로젝트 2 -->
-                        <div class="imagesDiv projectSlide2" style="display: none;">
-                            <div class="images">프로젝트 2</div>
-                            <div class="images">프로젝트 2</div>
-                            <div class="images">프로젝트 2</div>
-                        </div>
-                        <!-- sub slide: 프로젝트 3 -->
-                        <div class="imagesDiv projectSlide3" style="display: none;">
-                            <div class="images">프로젝트 3</div>
-                            <div class="images">프로젝트 3</div>
-                            <div class="images">프로젝트 3</div>
+                            
+                            <div class="images flex-slider">
+                                프로젝트 1
+                            </div>
+
+                            <div class="images flex-slider">
+                                프로젝트 2
+                            </div>
+
+                            <div class="images flex-slider">
+                                프로젝트 3
+                            </div>
+
                         </div>
                     </div>
 
@@ -227,29 +225,33 @@
     
 
             <!-- 기술 섹션(내부 링크 클릭 시 이동할 곳) -->
-            <section class="skillArea horizon_scroll">
+            <section class="skillArea horizon_scroll" id="skills">
                 <div class="frontSkills skillsList">
                     <div class="skillsGroupTitle">FrontEnd</div>
-                    <dev class="horizonalScroll">
-                        <ul class="skillsScroll">
-                            <li class="skills"></li>
-                            <li class="skills"></li>
-                            <li class="skills"></li>
-                            <li class="skills"></li>
-                            <li class="skills"></li>
+                    <div class="horizonalScroll">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
-                    </dev>
+                    </div>
                 </div>
 
                 <div class="backSkills skillsList">
                     <div class="skillsGroupTitle">BackEnd</div>
                     <div class="horizonalScroll">
-                        <ul class="skillsScroll">
-                            <li class="skills"></li>
-                            <li class="skills"></li>
-                            <li class="skills"></li>
-                            <li class="skills"></li>
-                            <li class="skills"></li>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </div>
                 </div>
@@ -257,12 +259,14 @@
                 <div class="designSkills skillsList">
                     <div class="skillsGroupTitle">Design</div>
                     <div class="horizonalScroll">
-                        <ul class="skillsScroll">
-                            <li class="skills"></li>
-                            <li class="skills"></li>
-                            <li class="skills"></li>
-                            <li class="skills"></li>
-                            <li class="skills"></li>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </div>
                 </div>
@@ -273,49 +277,5 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-<script>
-    
-    // 드롭다운 메뉴 토글
-    $('.subMenuUl').hide();
-    $(".mainList a").click(function () {
-        $(this).parent(".mainList").children("ul").slideToggle("100");
-        $(this).find("i.fa").toggleClass("fa-angle-up fa-angle-down");
-    });
-
-
-    // 메뉴(프로젝트 리스트) 선택
-    let highlight;
-
-    function addClass(target) {
-        target.classList.add('selector-item--active');
-    }
-
-    function selectItem(event) {
-        const target = event.target;
-        const items = document.querySelectorAll('.selector-item');
-        const parent = document.querySelector('.selector');
-        const targetRect = target.getBoundingClientRect();
-        const parentRect = parent.getBoundingClientRect();
-        
-        items.forEach(el => el.classList.remove('selector-item--active'));
-
-        highlight.style.left = `${targetRect.left - parentRect.left}px`;
-        
-        addClass(target);
-        setHighlightWidth(target);
-    }
-
-    function setHighlightWidth(target = null) {
-        const itemTarget = target || document.querySelector('.selector-item');
-        const rect = itemTarget.getBoundingClientRect();
-        
-        addClass(itemTarget)
-        
-        highlight = document.querySelector('.highlight');
-        highlight.style.width = `${rect.width}px`;
-    }
-
-    setHighlightWidth();
-
-</script>
+<script src="./project.js"></script>
 </html>
