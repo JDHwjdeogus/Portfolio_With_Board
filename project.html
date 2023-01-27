@@ -28,8 +28,8 @@
                             portfolio <i class='fa fa-angle-down'></i>
                         </a> 
                         <ul class="subMenuUl">
-                            <li class="subList"> <a href="#">프로젝트</a> </li>
-                            <li class="subList"> <a href="#">기술</a> </li>
+                            <li class="subList"> <a href="./project.html#project">프로젝트</a> </li>
+                            <li class="subList"> <a href="./project.html#skills">기술</a> </li>
                         </ul>
                     </li>
 
@@ -39,26 +39,26 @@
                         </a> 
                         <!-- 서브메뉴 -->
                         <ul class="subMenuUl">
-                            <li class="subList"> <a href="#">갤러리</a> </li>
-                            <li class="subList"> <a href="#">취미</a> </li>
+                            <li class="subList" onclick="alertIncomplete()"> <a href="#">갤러리</a> </li>
+                            <li class="subList" onclick="alertIncomplete()"> <a href="#">취미</a> </li>
                         </ul>
                     </li>
                     
-                    <li class="mainList main5"> <a href="#">profile</a> </li>
+                    <li class="mainList main3" onclick="alertIncomplete()"> <a href="#">profile</a> </li>
 
-                    <li class="mainList main3"> <a href="#">game</a> </li>
+                    <li class="mainList main4" onclick="alertIncomplete()"> <a href="#">game</a> </li>
 
-                    <li class="mainList main4"> <a href="#">board</a> </li>
+                    <li class="mainList main5" onclick="alertIncomplete()"> <a href="#">board</a> </li>
 
                     <li class="mainList main6"> 
                         <a href="#">
                             My Page <i class='fa fa-angle-down'></i>
                         </a> 
                         <!-- 서브메뉴 -->
-                        <ul class="subMenuUl"><!-- 쉿 구현 중 ^^...! -->
-                            <li class="subList"> <a href="#">내 정보</a> </li>
-                            <li class="subList"> <a href="#">게시판 이력</a> </li>
-                            <li class="subList"> <a href="#">게임 이력</a> </li> 
+                        <ul class="subMenuUl"><!-- 구현 중 -->
+                            <li class="subList" onclick="alertIncomplete()"> <a href="#">내 정보</a> </li>
+                            <li class="subList" onclick="alertIncomplete()"> <a href="#">게시판 이력</a> </li>
+                            <li class="subList" onclick="alertIncomplete()"> <a href="#">게임 이력</a> </li> 
                         </ul>
                     </li>
                 </ul>
@@ -95,14 +95,24 @@
             <section class="projectArea slide_manual" id="project">
                 <div class="contents">
 
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+
                     <!-- 열람할 프로젝트 선택: 슬라이드 전체 컨트롤 -->
                     <div class="projectList">
-                        <div class="projectNameList">
+                        <div class="projectNameList" id="controls">
                             <ul class="selector">
                                 <li class="highlight"></li>
-                                <li class="selector-item" onclick="selectItem(event)">프로젝트 1</li>
-                                <li class="selector-item" onclick="selectItem(event)">프로젝트 2</li>
-                                <li class="selector-item" onclick="selectItem(event)">프로젝트 3</li>
+                                <li class="selector-item" onclick="selectItem(event)">
+                                    프로젝트 1
+                                </li>
+                                <li class="selector-item" onclick="selectItem(event)">
+                                    프로젝트 2
+                                </li>
+                                <li class="selector-item" onclick="selectItem(event)">
+                                    프로젝트 3
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -110,17 +120,17 @@
                     <!-- 슬라이드 컨텐츠: 이미지 -->
                     <div class="imageSlide">
                         <!-- sub slide: 프로젝트 1 -->
-                        <div class="imagesDiv projectSlide1">
+                        <div class="imagesDiv inner">
                             
-                            <div class="images flex-slider">
+                            <div class="images flex-slider slide1">
                                 프로젝트 1
                             </div>
 
-                            <div class="images flex-slider">
+                            <div class="images flex-slider slide2">
                                 프로젝트 2
                             </div>
 
-                            <div class="images flex-slider">
+                            <div class="images flex-slider slide3">
                                 프로젝트 3
                             </div>
 
@@ -132,27 +142,29 @@
 
                         <div class="projectInfo">
                             <!-- 프로젝트 간단한 설명 바뀌는 부분 -->
-                            <div class="content">
+                            <div class="content inner">
                                 <!-- 프로젝트 1 -->
-                                <ul class="infoList projectInfoSlide1">
+                                <ul class="infoList slide1">
                                     <li>
                                         <span>소요기간</span>
-                                        <p>3일</p>
+                                        <p>상시 수정 (진행: 3주)</p>
                                     </li>
                                     <li>
                                         <span>사용언어</span>
                                         <p>html</p>
                                         <p>css</p>
+                                        <p>jQuery</p>
+                                        <p>javascript</p>
                                     </li>
                                     <li>
                                         <span>기획서</span>
                                         <p>
-                                            <a href="#">기획서 링크</a>
+                                            <a href="#">기획서 링크(연결 준비 중)</a>
                                         </p>
                                     </li>
                                 </ul>
                                 <!-- 프로젝트2 -->
-                                <ul class="infoList projectInfoSlide2">
+                                <ul class="infoList slide2">
                                     <li>
                                         <span>소요기간</span>
                                         <p>1주</p>
@@ -172,10 +184,10 @@
                                     </li>
                                 </ul>
                                 <!-- 프로젝트3 -->
-                                <ul class="infoList projectInfoSlide3">
+                                <ul class="infoList slide3">
                                     <li>
                                         <span>소요기간</span>
-                                        <p>3주</p>
+                                        <p>3주 (상시 수정)</p>
                                     </li>
                                     <li>
                                         <span>사용언어</span>
@@ -198,20 +210,22 @@
                         <!-- 프로젝트 상세 설명 바뀌는 부분 -->
                         <div class="projectDescription">
                             <!-- 프로젝트 1 -->
-                            <div class="content">
-                                <div class="projectDescriptinDetail projectDetailSlide1">
-                                    상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
-                                    상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
-                                    상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                            <div class="content inner">
+                                <div class="projectDescriptinDetail slide1">
+                                    간단한 게임과 게시판 기능을 곁들일 예정이었던 개인 포트폴리오 사이트. 게시판을 구현할 예정이었으나 UI에 치중하여 기간 내 구현하지 못했음. <br><br>
+                                    <b>보완점</b>: 
+                                    <br> 제작기간을 엄수하지 못했음, 
+                                    <br>기능 위주로 구현하지 않았음, 
+                                    <br>해당 설명 작성 시점(2023.01.27) 기준 프로젝트 섹션 전체 슬라이드를 구현하지 못했음. 
                                 </div>
                             <!-- 프로젝트 2 -->
-                                <div class="projectDescriptinDetail projectDetailSlide2">
+                                <div class="projectDescriptinDetail slide2">
                                     상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
                                     상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
                                     상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
                                 </div>
                             <!-- 프로젝트 3 -->
-                                <div class="projectDescriptinDetail projectDetailSlide3">
+                                <div class="projectDescriptinDetail slide3">
                                     상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
                                     상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
                                     상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
@@ -230,13 +244,10 @@
                     <div class="skillsGroupTitle">FrontEnd</div>
                     <div class="horizonalScroll">
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li><img src="./image/html5.svg" alt=""></li>
+                            <li><img src="./image/css3.svg" alt=""></li>
+                            <li><img src="./image/javascript.svg" alt=""></li>
+                            <li><img src="./image/jquery.svg" alt=""></li>
                         </ul>
                     </div>
                 </div>
@@ -245,13 +256,11 @@
                     <div class="skillsGroupTitle">BackEnd</div>
                     <div class="horizonalScroll">
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li><img src="./image/git.svg" alt=""></li>
+                            <li><img src="./image/java.svg"></li>
+                            <li><img src="./image/mysql.svg" alt=""></li>
+                            <li><img src="./image/spring.svg" alt=""></li>
+                            <li><img src="./image/springboot.svg" alt=""></li>
                         </ul>
                     </div>
                 </div>
@@ -260,13 +269,9 @@
                     <div class="skillsGroupTitle">Design</div>
                     <div class="horizonalScroll">
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li><img src="./image/psd.svg" alt=""></li>
+                            <li><img src="./image/ai.svg" alt=""></li>
+                            <li><img src="./image/3ds-max.svg" alt=""></li>
                         </ul>
                     </div>
                 </div>

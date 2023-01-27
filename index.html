@@ -21,7 +21,7 @@
             <div class="profile">
                 <div class="pic">
                     <div class="circle">
-                        <!-- background image로 설정할지 img태그를 넣을 지 고민 중 -->
+                        <img src="./image/jdh.png" alt="" style="max-width: 120%;">
                     </div>
                 </div>
 
@@ -61,7 +61,7 @@
             </div>
         </section>
         
-        <section class="flex gallery">
+        <section class="flex gallery" onclick="alertIncomplete()">
             <a href="#">
                 <div class="lottie lottie2">
                     <lottie-player src="https://lottie.host/a74e1dde-faea-4a74-a66f-850fced3dd7b/rDWrNSf2d2.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -80,7 +80,7 @@
             </div>
         </section>
         
-        <section class="flex others">
+        <section class="flex others" onclick="alertIncomplete()">
             <a href="#">
                 <div class="lottie lottie3">
                     <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_FGFVGY.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
@@ -99,7 +99,7 @@
             </div>
         </section>
         
-        <section class="flex login">    
+        <section class="flex login" onclick="alertIncomplete()">    
             <a href="#">
                 <div class="lottie lottie4">
                     <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_dn6rwtwl.json" background="transparent" speed="1.5" loop autoplay></lottie-player>
@@ -154,6 +154,10 @@
         
         menu.classList.toggle("on");
         nav.classList.toggle("on");
+    }
+
+    function alertIncomplete() {
+        alert("서비스 준비 중... 🛠");
     }
 </script>
 </html>

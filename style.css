@@ -32,7 +32,7 @@ section .attribution { position: absolute; right: 5%; top: 5%; max-width: 40%; }
 .intro {position: relative;}
 .profile {position: absolute; top: 24%;}
 
-.circle { width: 200px; height: 200px; background-color: #9c7bbf; border-radius: 100px; margin: 0 auto;}
+.circle { width: 200px; height: 200px; background-color: #ebe6d3; border-radius: 100px; margin: 0 auto; overflow: hidden;}
 
 .info {margin: 28px 0;}
 .info ul {margin: 0 15px;}

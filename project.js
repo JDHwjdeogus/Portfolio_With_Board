@@ -39,3 +39,7 @@
     }
 
     setHighlightWidth();
+
+    function alertIncomplete() {
+        alert("서비스 준비 중... 🛠");
+    }
