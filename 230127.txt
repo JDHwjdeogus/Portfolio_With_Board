@@ -9,7 +9,7 @@ curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh
 엔드포인트: jeongdahyeon.ceqayamatekx.ap-northeast-2.rds.amazonaws.com
 yaml url의 localhost를 지우고 엔드포인트 대입
 
-시발... 그래들로 프로젝트 압축하기 
+... 그래들로 프로젝트 압축하기 
 
 
-시발 염병 그냥 프로젝트 배포하기 서치하기
+... 그냥 프로젝트 배포하기 google 서치하기
