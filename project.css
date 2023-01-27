@@ -4,7 +4,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
-.wrap { position: relative; overflow: hidden;  background-image: linear-gradient(0deg, #bda2e3 , #ffffff 80%, #261e31); }
+.wrap { position: relative; overflow: hidden; background-color: #dbd5ec; }
 a { text-decoration: none; }
 ul li { list-style: none; }
 .flex { display: flex; flex-direction: column; justify-content: center; align-items: center; }
