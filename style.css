@@ -26,7 +26,7 @@ section {position: relative;}
 
 .lottie lottie-player { width: 30vw; height: 40vh; }
 section .attribution { position: absolute; right: 5%; top: 5%; max-width: 40%; }
-.attribution, .attribution a { color: #000000cc; text-align: center; font-size: 15px; line-height: 30px; font-weight: 600; }
+.attribution, .attribution a { color: #000000cc; text-align: center; font-size: 15px; line-height: 30px; }
 
 /* profile */
 .intro {position: relative;}
