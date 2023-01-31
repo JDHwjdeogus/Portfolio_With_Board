@@ -44,19 +44,6 @@
         alert("서비스 준비 중... 🛠");
     }
 
-    // 프로젝트 탭 변경 
-    $(".projects-type").on("click", function () {
 
-        $(".projects-type.active").removeClass("active");
-        $(this).addClass("active");
+    // 프로젝트 탭 변경 
     
-        var type = $(this)[0].classList[2];
-        var all = $(".projects-item");
-        var on = $(".projects-item." + type);
-        var off = all.not(on);
-    
-        console.log("type: " + type + " on: " + on.length + " off: " + off.length);
-    
-        on.removeClass("hide");
-        off.addClass("hide");
-    });

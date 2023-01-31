@@ -93,7 +93,7 @@
             
             <!-- 프로젝트 섹션(내부 링크 클릭 시 이동할 곳) -->
             <section class="projectArea slide_manual" id="project">
-                <div class="contents">
+                <div class="contents tab_menu">
 
                     <!-- 열람할 프로젝트 선택: 슬라이드 전체 컨트롤 -->
                     <div class="projectList">
@@ -101,130 +101,171 @@
                             <ul class="selector">
                                 <li class="highlight"></li>
                                 <li class="selector-item" onclick="selectItem(event)">
-                                    프로젝트 1
+                                    <a href="#item1"> 프로젝트 1 </a>
                                 </li>
                                 <li class="selector-item" onclick="selectItem(event)">
-                                    프로젝트 2
+                                    <a href="#item2"> 프로젝트 2 </a>
                                 </li>
                                 <li class="selector-item" onclick="selectItem(event)">
-                                    프로젝트 3
+                                    <a href="#item3"> 프로젝트 3 </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- 슬라이드 컨텐츠: 이미지 -->
-                    <div class="imageSlide">
-                        <!-- sub slide: 프로젝트 1 -->
-                        <div class="imagesDiv inner">
-                            
-                            <div class="images flex-slider slide1">
-                                프로젝트 1
-                            </div>
+                    <!-- 탭메뉴 1 (프로젝트 1 컨텐츠) -->
+                    <div class="tabMenuContent" id="item1">
 
-                            <div class="images flex-slider slide2">
-                                프로젝트 2
+                        <!-- 탭메뉴 컨텐츠: 이미지 -->
+                        <div class="imageSlide">
+                            <div class="imagesDiv inner">
+                                <div class="images">
+                                    프로젝트 1 사진
+                                </div>
                             </div>
-
-                            <div class="images flex-slider slide3">
-                                프로젝트 3
-                            </div>
-
                         </div>
+                        <!-- 탭메뉴 컨텐츠: 프로젝트 정보(개요 & 세부사항) -->
+                        <div class="infoSlide">
+                            <!-- 프로젝트 개요 바뀌는 부분 -->
+                            <div class="projectInfo">
+                                <div class="content inner">
+                                    <ul class="infoList">
+                                        <li>
+                                            <span>소요기간</span>
+                                            <p>상시 수정 (진행: 3주)</p>
+                                        </li>
+                                        <li>
+                                            <span>사용언어</span>
+                                            <p>html</p>
+                                            <p>css</p>
+                                            <p>jQuery</p>
+                                            <p>javascript</p>
+                                        </li>
+                                        <li>
+                                            <span>기획서</span>
+                                            <p>
+                                                <a href="#">기획서 링크(연결 준비 중)</a>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 프로젝트 상세 설명 바뀌는 부분 -->
+                            <div class="projectDescription">
+                                <div class="content inner">
+                                    <div class="projectDescriptinDetail">
+                                        간단한 게임과 게시판 기능을 곁들일 예정이었던 개인 포트폴리오 사이트. 게시판을 구현할 예정이었으나 UI에 치중해 기간 내 구현하지 못했음. <br><br>
+                                        <b>보완점</b>: 
+                                        <br>제작기간을 엄수하지 못했음, 
+                                        <br>기능 위주로 구현하지 않았음, 
+                                        <br>해당 설명 작성 시점(2023.01.27) 기준 프로젝트 섹션 전체 슬라이드를 구현하지 못했음. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- 슬라이드 컨텐츠: 프로젝트 인포 -->
-                    <div class="infoSlide">
 
-                        <div class="projectInfo">
-                            <!-- 프로젝트 간단한 설명 바뀌는 부분 -->
-                            <div class="content inner">
-                                <!-- 프로젝트 1 -->
-                                <ul class="infoList slide1">
-                                    <li>
-                                        <span>소요기간</span>
-                                        <p>상시 수정 (진행: 3주)</p>
-                                    </li>
-                                    <li>
-                                        <span>사용언어</span>
-                                        <p>html</p>
-                                        <p>css</p>
-                                        <p>jQuery</p>
-                                        <p>javascript</p>
-                                    </li>
-                                    <li>
-                                        <span>기획서</span>
-                                        <p>
-                                            <a href="#">기획서 링크(연결 준비 중)</a>
-                                        </p>
-                                    </li>
-                                </ul>
-                                <!-- 프로젝트2 -->
-                                <ul class="infoList slide2">
-                                    <li>
-                                        <span>소요기간</span>
-                                        <p>1주</p>
-                                    </li>
-                                    <li>
-                                        <span>사용언어</span>
-                                        <p>html</p>
-                                        <p>css</p>
-                                        <p>jQuery</p>
-                                        <p>java script</p>
-                                    </li>
-                                    <li>
-                                        <span>기획서</span>
-                                        <p>
-                                            <a href="#">기획서 링크</a>
-                                        </p>
-                                    </li>
-                                </ul>
-                                <!-- 프로젝트3 -->
-                                <ul class="infoList slide3">
-                                    <li>
-                                        <span>소요기간</span>
-                                        <p>3주 (상시 수정)</p>
-                                    </li>
-                                    <li>
-                                        <span>사용언어</span>
-                                        <p>html</p>
-                                        <p>css</p>
-                                        <p>jQuery</p>
-                                        <p>java script</p>
-                                        <p>mySql</p>
-                                    </li>
-                                    <li>
-                                        <span>기획서</span>
-                                        <p>
-                                            <a href="#">기획서 링크</a>
-                                        </p>
-                                    </li>
-                                </ul>
+                    <div class="tabMenuContent" id="item2">
+
+                        <!-- 탭메뉴 컨텐츠: 이미지 -->
+                        <div class="imageSlide">
+                            <div class="imagesDiv inner">
+                                <div class="images">
+                                    프로젝트 2 사진
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 탭메뉴 컨텐츠: 프로젝트 정보(개요 & 세부사항) -->
+                        <div class="infoSlide">
+                            <!-- 프로젝트 개요 바뀌는 부분 -->
+                            <div class="projectInfo">
+                                <div class="content inner">
+                                    <ul class="infoList">
+                                        <li>
+                                            <span>소요기간</span>
+                                            <p>상시 수정 (진행: 3주)</p>
+                                        </li>
+                                        <li>
+                                            <span>사용언어</span>
+                                            <p>html</p>
+                                            <p>css</p>
+                                            <p>jQuery</p>
+                                            <p>javascript</p>
+                                        </li>
+                                        <li>
+                                            <span>기획서</span>
+                                            <p>
+                                                <a href="#">기획서 링크(연결 준비 중)</a>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 프로젝트 상세 설명 바뀌는 부분 -->
+                            <div class="projectDescription">
+                                <div class="content inner">
+                                    <div class="projectDescriptinDetail">
+                                        간단한 게임과 게시판 기능을 곁들일 예정이었던 개인 포트폴리오 사이트. 게시판을 구현할 예정이었으나 UI에 치중해 기간 내 구현하지 못했음. <br><br>
+                                        <b>보완점</b>: 
+                                        <br>제작기간을 엄수하지 못했음, 
+                                        <br>기능 위주로 구현하지 않았음, 
+                                        <br>해당 설명 작성 시점(2023.01.27) 기준 프로젝트 섹션 전체 슬라이드를 구현하지 못했음. 
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- 프로젝트 상세 설명 바뀌는 부분 -->
-                        <div class="projectDescription">
-                            <!-- 프로젝트 1 -->
-                            <div class="content inner">
-                                <div class="projectDescriptinDetail slide1">
-                                    간단한 게임과 게시판 기능을 곁들일 예정이었던 개인 포트폴리오 사이트. 게시판을 구현할 예정이었으나 UI에 치중해 기간 내 구현하지 못했음. <br><br>
-                                    <b>보완점</b>: 
-                                    <br>제작기간을 엄수하지 못했음, 
-                                    <br>기능 위주로 구현하지 않았음, 
-                                    <br>해당 설명 작성 시점(2023.01.27) 기준 프로젝트 섹션 전체 슬라이드를 구현하지 못했음. 
+                    </div>
+
+
+                    <div class="tabMenuContent" id="item3">
+
+                        <!-- 탭메뉴 컨텐츠: 이미지 -->
+                        <div class="imageSlide">
+                            <div class="imagesDiv inner">
+                                <div class="images">
+                                    프로젝트 3 사진
                                 </div>
-                            <!-- 프로젝트 2 -->
-                                <div class="projectDescriptinDetail slide2">
-                                    상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
-                                    상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
-                                    상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                            </div>
+                        </div>
+                        <!-- 탭메뉴 컨텐츠: 프로젝트 정보(개요 & 세부사항) -->
+                        <div class="infoSlide">
+                            <!-- 프로젝트 개요 바뀌는 부분 -->
+                            <div class="projectInfo">
+                                <div class="content inner">
+                                    <ul class="infoList">
+                                        <li>
+                                            <span>소요기간</span>
+                                            <p>상시 수정 (진행: 3주)</p>
+                                        </li>
+                                        <li>
+                                            <span>사용언어</span>
+                                            <p>html</p>
+                                            <p>css</p>
+                                            <p>jQuery</p>
+                                            <p>javascript</p>
+                                        </li>
+                                        <li>
+                                            <span>기획서</span>
+                                            <p>
+                                                <a href="#">기획서 링크(연결 준비 중)</a>
+                                            </p>
+                                        </li>
+                                    </ul>
                                 </div>
-                            <!-- 프로젝트 3 -->
-                                <div class="projectDescriptinDetail slide3">
-                                    상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
-                                    상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
-                                    상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 상세설명을넣기 
+                            </div>
+                            <!-- 프로젝트 상세 설명 바뀌는 부분 -->
+                            <div class="projectDescription">
+                                <div class="content inner">
+                                    <div class="projectDescriptinDetail">
+                                        간단한 게임과 게시판 기능을 곁들일 예정이었던 개인 포트폴리오 사이트. 게시판을 구현할 예정이었으나 UI에 치중해 기간 내 구현하지 못했음. <br><br>
+                                        <b>보완점</b>: 
+                                        <br>제작기간을 엄수하지 못했음, 
+                                        <br>기능 위주로 구현하지 않았음, 
+                                        <br>해당 설명 작성 시점(2023.01.27) 기준 프로젝트 섹션 전체 슬라이드를 구현하지 못했음. 
+                                    </div>
                                 </div>
                             </div>
                         </div>
