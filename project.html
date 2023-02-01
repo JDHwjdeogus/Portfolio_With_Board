@@ -12,7 +12,7 @@
 <body>
     <div class="wrap">
 
-        <!-- 사이트 위쪽 스크롤 고정 영역 -->
+        <!-- 사이트 위쪽 영역 -->
         <section class="menuSection">
             <div class="menuWrap">
 
@@ -96,29 +96,27 @@
                 <div class="contents tab_menu">
 
                     <!-- 열람할 프로젝트 선택: 슬라이드 전체 컨트롤 -->
-                    <div class="projectList">
-                        <div class="projectNameList" id="controls">
-                            <ul class="selector">
-                                <li class="highlight"></li>
-                                <li class="selector-item" onclick="selectItem(event)">
-                                    <a href="#item1"> 프로젝트 1 </a>
+                    <div class="projectNameList" id="controls">
+                        <ul class="selector">
+                            <li class="highlight"></li>
+                            <li class="selector-item" onclick="selectItem(event)">
+                                <a href="#item1"> 프로젝트 1 </a>
+                            </li>
+                            <li class="selector-item" onclick="selectItem(event)">
+                                <a href="#item2"> 프로젝트 2 </a>
+                            </li>
+                            <li class="selector-item" onclick="selectItem(event)">
+                                <a href="#item3"> 프로젝트 3 </a>
                                 </li>
-                                <li class="selector-item" onclick="selectItem(event)">
-                                    <a href="#item2"> 프로젝트 2 </a>
-                                </li>
-                                <li class="selector-item" onclick="selectItem(event)">
-                                    <a href="#item3"> 프로젝트 3 </a>
-                                </li>
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
 
                     <!-- 탭메뉴 1 (프로젝트 1 컨텐츠) -->
-                    <div class="tabMenuContent" id="item1">
+                    <div class="tabMenuContent" id="item1" style="display: block;">
 
                         <!-- 탭메뉴 컨텐츠: 이미지 -->
                         <div class="imageSlide">
-                            <div class="imagesDiv inner">
+                            <div class="content">
                                 <div class="images">
                                     프로젝트 1 사진
                                 </div>
@@ -128,18 +126,22 @@
                         <div class="infoSlide">
                             <!-- 프로젝트 개요 바뀌는 부분 -->
                             <div class="projectInfo">
-                                <div class="content inner">
+                                <div class="content">
                                     <ul class="infoList">
                                         <li>
                                             <span>소요기간</span>
-                                            <p>상시 수정 (진행: 3주)</p>
+                                            <p>상시 수정 (진행 기간: 3주)</p>
                                         </li>
-                                        <li>
+                                        <li class="flexWrap">
                                             <span>사용언어</span>
                                             <p>html</p>
                                             <p>css</p>
                                             <p>jQuery</p>
                                             <p>javascript</p>
+                                            <div class="flex-in-flex">
+                                                <p>mySQL</p>
+                                                <p>SpringBoot</p>
+                                            </div>
                                         </li>
                                         <li>
                                             <span>기획서</span>
@@ -152,13 +154,13 @@
                             </div>
                             <!-- 프로젝트 상세 설명 바뀌는 부분 -->
                             <div class="projectDescription">
-                                <div class="content inner">
+                                <div class="content">
                                     <div class="projectDescriptinDetail">
-                                        간단한 게임과 게시판 기능을 곁들일 예정이었던 개인 포트폴리오 사이트. 게시판을 구현할 예정이었으나 UI에 치중해 기간 내 구현하지 못했음. <br><br>
+                                        간단한 게임과 게시판 기능을 곁들인 개인 포트폴리오 사이트. <br><br>
                                         <b>보완점</b>: 
-                                        <br>제작기간을 엄수하지 못했음, 
-                                        <br>기능 위주로 구현하지 않았음, 
-                                        <br>해당 설명 작성 시점(2023.01.27) 기준 프로젝트 섹션 전체 슬라이드를 구현하지 못했음. 
+                                        <br>UI에 치중해 기간 내로 기능 및 해당 페이지와 메인 페이지를 제외한 모든 페이지를 구현하지 못했음.
+                                        <br>제작기간을 엄수하지 못했음,
+                                        <br>프로젝트 마감일인 해당 설명 작성일(2023.01.27) 기준 프로젝트 섹션 전체 슬라이드를 구현하지 못했음. 
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +173,7 @@
 
                         <!-- 탭메뉴 컨텐츠: 이미지 -->
                         <div class="imageSlide">
-                            <div class="imagesDiv inner">
+                            <div class="content">
                                 <div class="images">
                                     프로젝트 2 사진
                                 </div>
@@ -181,11 +183,11 @@
                         <div class="infoSlide">
                             <!-- 프로젝트 개요 바뀌는 부분 -->
                             <div class="projectInfo">
-                                <div class="content inner">
+                                <div class="content">
                                     <ul class="infoList">
                                         <li>
                                             <span>소요기간</span>
-                                            <p>상시 수정 (진행: 3주)</p>
+                                            <p>1주</p>
                                         </li>
                                         <li>
                                             <span>사용언어</span>
@@ -205,7 +207,7 @@
                             </div>
                             <!-- 프로젝트 상세 설명 바뀌는 부분 -->
                             <div class="projectDescription">
-                                <div class="content inner">
+                                <div class="content">
                                     <div class="projectDescriptinDetail">
                                         간단한 게임과 게시판 기능을 곁들일 예정이었던 개인 포트폴리오 사이트. 게시판을 구현할 예정이었으나 UI에 치중해 기간 내 구현하지 못했음. <br><br>
                                         <b>보완점</b>: 
@@ -224,7 +226,7 @@
 
                         <!-- 탭메뉴 컨텐츠: 이미지 -->
                         <div class="imageSlide">
-                            <div class="imagesDiv inner">
+                            <div class="content">
                                 <div class="images">
                                     프로젝트 3 사진
                                 </div>
@@ -234,7 +236,7 @@
                         <div class="infoSlide">
                             <!-- 프로젝트 개요 바뀌는 부분 -->
                             <div class="projectInfo">
-                                <div class="content inner">
+                                <div class="content">
                                     <ul class="infoList">
                                         <li>
                                             <span>소요기간</span>
@@ -258,7 +260,7 @@
                             </div>
                             <!-- 프로젝트 상세 설명 바뀌는 부분 -->
                             <div class="projectDescription">
-                                <div class="content inner">
+                                <div class="content">
                                     <div class="projectDescriptinDetail">
                                         간단한 게임과 게시판 기능을 곁들일 예정이었던 개인 포트폴리오 사이트. 게시판을 구현할 예정이었으나 UI에 치중해 기간 내 구현하지 못했음. <br><br>
                                         <b>보완점</b>: 

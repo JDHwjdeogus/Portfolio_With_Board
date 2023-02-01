@@ -62,37 +62,34 @@ section { position: relative; }
 .projectArea { width: 90.1vw; padding: 3vh 4vw; }
 .contents { width: 80vw; margin: 0 auto;}
 
-.projectList { margin: 0 auto; } 
-.projectNameList ul { display: flex; flex-direction: row; justify-content: center; position: relative; }
+/* 프로젝트 탭 메뉴 */
+.projectNameList ul { margin: 0 auto; display: flex; flex-direction: row; justify-content: center; position: relative; }
 .projectNameList ul li { flex-basis: 20%; height: 5vh; line-height: 5vh; text-align: center; font-size: 21px; font-weight: 600; cursor: pointer; z-index: 2; user-select: none; }
 .projectNameList ul li a { color: #241d26; display: block; width: 100%; height: 100%; }
 .highlight { left: 16vw; background-color: #75717f; border-radius: 40%; position: absolute; z-index: 1; transition: left 0.2s ease, width 0.2s ease; }
 
+/* 탭 메뉴 컨텐츠 공통 */
+.tabMenuContent { display: none; }
 
-/* 프로젝트 탭 메뉴 */
-
-
-/* 이미지 슬라이드 (구역 잡기) */
+/* 이미지 탭 (구역 잡기) */
 .imageSlide { width: 70vw; background-color: #9e9e9e; margin: 2vh auto; margin-bottom: 0; overflow: hidden; }
-.imagesDiv { display: flex; flex-direction: row; width: 210vw; }/*판넬*/
 .images { width: 70vw; height: 48vh; }
 
-/* 설명 슬라이드 (구역 잡기) */
+/* 설명 탭 (구역 잡기) */
 .infoSlide { display: flex; flex-wrap: wrap; margin: 0 auto; margin-left: 5vw; }
 
 .projectInfo { width: 25vw; background-color: #dd99da; overflow: hidden; }
-.projectInfo .content { width: 75vw; display: flex; flex-direction: row; }/*판넬*/
 .infoList { padding: 2vh 2vw; width: 25vw; height: 40vh; }
 
 .projectDescription { width: 45vw; height: 40vh; background-color: #8a9ab8; overflow: hidden; }
-.projectDescription .content { width: 135vw; display: flex; flex-direction: row; }/*판넬*/
 .projectDescriptinDetail { padding: 2vh 2vw; width: 45vw; height: 40vh; }
 
-/* 설명 슬라이드 내부 콘텐츠 */
+/* 개요 탭: 내부 콘텐츠 */
 .infoList li { display: flex; }
 .infoList li span { width: 6vw; height: 40px; font-weight: 600; font-size: 20px; } 
 .infoList li p { display: block; margin: 0 1vh; }
-
+.flexWrap { flex-wrap: wrap; margin-bottom: 2vh;}
+.flex-in-flex { display: flex; justify-content: flex-end; width: 100%; }
 
 
 /* 기술 */
