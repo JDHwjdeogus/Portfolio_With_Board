@@ -32,9 +32,16 @@
 
         <section class="contactSection">
             <div class="fixScroll">
-                <form action="" class="contact"></form>
+                <form id="form-send" class="contact" method="POST">
+                    <input class="form-item" type="text" placeholder="Name" name="name">
+                    <input class="form-item" type="email" placeholder="Email" name="email">
+                    <input class="form-item" type="text" placeholder="Title" name="title">
+                    <textarea class="form-item" placeholder="Message" name="message"></textarea>
+                    <button class="btn-submit" type="reset" form="form-send" onclick="sendMessage();">Send Message</button>
+                </form>
             </div>
         </section>
+        <!-- https://github.com/DevJaewoo/DevJaewoo.github.io -->
     </div>
 </body>
 </html>
