@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -65,7 +64,7 @@ section { position: relative; }
 .projectNameList ul { margin: 0 auto; display: flex; flex-direction: row; justify-content: center; position: relative; }
 .projectNameList ul li { flex-basis: 20%; height: 5vh; line-height: 5vh; text-align: center; font-size: 21px; font-weight: 600; cursor: pointer; z-index: 2; user-select: none; }
 .projectNameList ul li a { color: #241d26; display: block; width: 100%; height: 100%; }
-.highlight { left: 16vw; background-color: #79b1d6; border-radius: 40%; position: absolute; z-index: 1; transition: left 0.2s ease, width 0.2s ease; }
+.highlight { left: 8vw; background-color: #79b1d6; border-radius: 40%; position: absolute; z-index: 1; transition: left 0.2s ease, width 0.2s ease; }
 
 /* 탭 메뉴 컨텐츠 공통 */
 .tabMenuContent { display: none; }
